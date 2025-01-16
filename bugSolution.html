@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Corrected HTML</title>
+</head>
+<body>
+  <div id="myDiv"></div>
+
+  <script>
+    // Correct way to access element by ID, using DOMContentLoaded
+    document.addEventListener('DOMContentLoaded', function() {
+        const myDiv = document.getElementById('myDiv');
+        if(myDiv) { //Checking if the element exists
+          myDiv.innerHTML = "Hello, world!";
+        }
+        else {
+          console.error("Element with id 'myDiv' not found");
+        }
+    });
+  </script>
+</body>
+</html>
